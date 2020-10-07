@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Welcome to the Pet InformationStore</title>
+    <script type="text/javascript">
+        function doUpdate(){
+            var owner =document.getElementById("personOption").value;
+            window.location = "/petview/" +owner;
+        }
+    </script>
+</head>
+<body>
+    <select id="personOption">
+        {% for person in people %}
+        <option id="{{person.id}}" value="{{person.id}}">
+            {{person.given_name}} {{person.surname}}
+        </option>
+        {% endfor %}
+    </select>
+    <button id="updateBtn" onclick="doUpdate()">Get Pets!</button>
+    {% if owner %}
+    <p>
+        {% if pets %}
+        {{owner}} has pets:
+        {% for pet in pets %}
+        {{pet.name}}
+        {% endfor %}
+        {% else %}
+        {{owner}} has no pets
+        {% endif %}
+    </p>
+    {% endif %}
+</body>
+</html>
