@@ -1,4 +1,5 @@
 from django.db import models
+
 class Person(models.Model):
     given_name = models.CharField('given name',max_length=50)
     surname = models.CharField(max_length=50)

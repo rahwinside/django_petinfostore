@@ -17,10 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 
-from petinfostore.views import petview
+from petinfostore.views import petview, parse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^petview/$', petview),
+    url(r'^parse/$', parse),
     url(r'^petview/(?P<owner_id>\d+)/$', petview),
 ]

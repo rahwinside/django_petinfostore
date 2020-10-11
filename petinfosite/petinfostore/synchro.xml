@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+
+<results>
+    <readbit number="1" frame="10" bit="0" score="-0.483138" status="n" />
+    <readbit number="2" frame="20" bit="1" score="0.416175" status="n" />
+    <readbit number="3" frame="30" bit="0" score="-0.457450" status="n" />
+    <readbit number="4" frame="40" bit="1" score="0.597008" status="y" />
+</results>
